@@ -1,37 +1,25 @@
 # Analysis of High Grossing Movies
-This project uses the Titanic dataset to predict whether a passenger survived or not based on personal and travel-related features such as class, age, sex, fare, and embarkation point. A Naïve Bayes classification model is applied to analyze these factors and estimate survival probabilities.
+This project uses a dataset of the highest-grossing movies to analyze box office performance based on features such as rank, title, producing studio, total gross revenue, and year of release. A regression and ranking analysis is applied to examine these factors and identify patterns in movie success.
 ## Dataset Information
-The dataset used in this project provides information about the passengers in the titanic It includes the following columns:
+The dataset used in this project provides information about the highest-grossing movies. It includes the following columns:
 
 | Variable | Description |
 | --- | --- |
-| PassengerId | A unique identification number assigned to each passenger. |
-|Survived | Survival outcome of the passenger (1 = survived, 0 = did not survive). |
-|Pclass | Passenger class indicating socio-economic status (1st, 2nd, or 3rd class). |
-|Name | Full name of the passenger. |
-|Sex | Gender of the passenger (male or female). |
-|Age | Age of the passenger in years. |
-|SibSp | Number of siblings or spouses traveling with the passenger. |
-|Parch | Number of parents or children traveling with the passenger. |
-|Ticket |Ticket number assigned to the passenger. |
-|Fare | Amount of money paid for the ticket. |
-|Cabin | Cabin number where the passenger stayed (if available). |
-|Embarked | Port where the passenger boarded the ship (S, C, or Q). |
+|Rank | A position of each movie based on its gross earnings |
+|Title | Contains the name of the movie. |
+|Studio | Lists the studio responsible for producing the movie.. |
+|Gross | Total earnings of the movie at the box office, displayed in millions of dollars. |
+|Year | Release year of the movie.|
 
 ## Objective
-To predict the survival of Titanic passengers using a Naïve Bayes classification model based on their personal, social, and travel-related features.
+The objective of this dataset is to analyze the movies that have earned the most at the box office. It aims to identify trends in the film industry, such as the popularity of certain studios, years with higher earnings, and the impact of movie franchises on revenue.
 
 ## Approach
-- Data Collection: Load the Titanic dataset containing passenger details (personal, social, and travel-related features).
-- Data Cleaning & Preprocessing:
-- Handle missing values (e.g., fill missing ages with median, missing embarked points with mode).
-- Remove irrelevant columns (e.g., Name, Ticket, Cabin).
-- Encode categorical variables like Sex and Embarked into numerical values.
-- Feature Selection: Define input features (Pclass, Sex, Age, SibSp, Parch, Fare, Embarked) and target variable (Survived).
-- Train-Test Split: Divide the dataset into training and testing sets (e.g., 80% training, 20% testing).
-- Model Training: Train a Naïve Bayes classifier (GaussianNB) on the training set.
-- Prediction: Use the trained model to predict survival on the test set and on new/random passenger data.
-- Evaluation: Assess model performance using accuracy, confusion matrix, and classification report.
+- Data Collection: Load the highest-grossing movies dataset with rank, title, studio, gross, and year.
+- Data Cleaning: Handle missing values and encode categorical variables like Studio.
+- Feature Selection: Use Rank, Studio, and Year as input features and Gross as the target.
+- Model Training: Train a regression model to predict box office earnings.
+- Evaluation: Measure performance using metrics like R² and mean squared error, and analyze trends such as top studios and high-earning years.
 
 ## Impact
-The project’s impact lies in demonstrating how machine learning can be used to analyze historical data, uncover factors affecting survival, and provide insights for risk assessment and decision-making in safety-critical scenarios.
+This project helps identify trends in the film industry, such as which studios consistently produce top-grossing movies, which years see higher box office earnings, and how factors like movie rank and release timing influence revenue. It can guide studios, producers, and analysts in making data-driven decisions for future film production and marketing strategies.
