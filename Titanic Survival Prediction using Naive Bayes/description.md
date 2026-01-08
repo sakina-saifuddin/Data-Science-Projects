@@ -1,25 +1,37 @@
-# Medical Cost Prediction
-![](https://miro.medium.com/v2/resize:fit:1400/0*ssbGU5VIxtVB6NrF)
-This data science project aims to predict individual medical costs using a dataset containing various attributes related to health insurance. The project focuses on analyzing features such as age, gender, BMI, number of children, smoking status, region, and predicting the corresponding medical costs.
+# Titanic Survival Prediction Using Naïve Bayes
+This project uses the Titanic dataset to predict whether a passenger survived or not based on personal and travel-related features such as class, age, sex, fare, and embarkation point. A Naïve Bayes classification model is applied to analyze these factors and estimate survival probabilities.
 ## Dataset Information
-The dataset used in this project provides information about health insurance beneficiaries and their medical costs. It includes the following columns:
+The dataset used in this project provides information about the passengers in the titanic It includes the following columns:
 
 | Variable | Description |
 | --- | --- |
-| age | age of primary beneficiary |
-|bmi | body mass index |
-|children | number of children covered by health insurance |
-|smoker | smoking |
-|region | the beneficiary's residential area in the US |
-|charges | individual medical costs billed by health insurance |
+| PassengerId | A unique identification number assigned to each passenger. |
+|Survived | Survival outcome of the passenger (1 = survived, 0 = did not survive). |
+|Pclass | Passenger class indicating socio-economic status (1st, 2nd, or 3rd class). |
+|Name | Full name of the passenger. |
+|Sex | Gender of the passenger (male or female). |
+|Age | Age of the passenger in years. |
+|SibSp | Number of siblings or spouses traveling with the passenger. |
+|Parch | Number of parents or children traveling with the passenger. |
+|Ticket |Ticket number assigned to the passenger. |
+|Fare | Amount of money paid for the ticket. |
+|Cabin | Cabin number where the passenger stayed (if available). |
+|Embarked | Port where the passenger boarded the ship (S, C, or Q). |
 
 ## Objective
-The main objective of this project is to develop a predictive model that can accurately estimate the medical costs for individuals based on their attributes. By analyzing the dataset and identifying patterns and relationships, the model will provide insights into the factors influencing medical expenses.
+To predict the survival of Titanic passengers using a Naïve Bayes classification model based on their personal, social, and travel-related features.
 
 ## Approach
-The project will involve several steps, including data preprocessing, exploratory data analysis, feature engineering, model selection, and evaluation. The dataset will be prepared by handling missing values, encoding categorical variables, and scaling numerical features. Various regression algorithms, such as linear regression, decision trees, random forests, or gradient boosting, will be explored and evaluated to determine the most effective model for cost prediction.
+- Data Collection: Load the Titanic dataset containing passenger details (personal, social, and travel-related features).
+- Data Cleaning & Preprocessing:
+- Handle missing values (e.g., fill missing ages with median, missing embarked points with mode).
+- Remove irrelevant columns (e.g., Name, Ticket, Cabin).
+- Encode categorical variables like Sex and Embarked into numerical values.
+- Feature Selection: Define input features (Pclass, Sex, Age, SibSp, Parch, Fare, Embarked) and target variable (Survived).
+- Train-Test Split: Divide the dataset into training and testing sets (e.g., 80% training, 20% testing).
+- Model Training: Train a Naïve Bayes classifier (GaussianNB) on the training set.
+- Prediction: Use the trained model to predict survival on the test set and on new/random passenger data.
+- Evaluation: Assess model performance using accuracy, confusion matrix, and classification report.
 
 ## Impact
-Accurate medical cost prediction has significant implications for various stakeholders, including insurance companies, healthcare providers, and individuals. A reliable predictive model can assist insurance companies in assessing risks, determining appropriate premium rates, and managing resources efficiently. Healthcare providers can benefit from cost estimation to optimize resource allocation and budget planning. Additionally, individuals can gain insights into their potential medical expenses and make informed decisions regarding health insurance coverage.
-
-By leveraging machine learning techniques, this project aims to provide valuable insights into medical cost prediction and contribute to more accurate financial planning in the healthcare industry.
+The project’s impact lies in demonstrating how machine learning can be used to analyze historical data, uncover factors affecting survival, and provide insights for risk assessment and decision-making in safety-critical scenarios.
