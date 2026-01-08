@@ -1,5 +1,5 @@
 # HMS - Harmful Brain Activity Classification
-This data science project aims to predict individual medical costs using a dataset containing various attributes related to health insurance. The project focuses on analyzing features such as age, gender, BMI, number of children, smoking status, region, and predicting the corresponding medical costs.
+This project uses a Kaggle EEG dataset where EEG signals are converted into spectrogram images and classified using basic CNN models and EfficientNetB0. The models identify seizures and other harmful brain activities, with performance evaluated using Kullback–Leibler divergence.
 ## Dataset Information
 The dataset used in this project provides information about EEG Data. It includes the following columns:
 
@@ -17,12 +17,7 @@ The dataset used in this project provides information about EEG Data. It include
 |[seizure/lpd/gpd/lrda/grda/other]_vote  | he count of annotator votes for a given brain activity class.|
 
 ## Objective
-The main objective of this project is to develop a predictive model that can accurately estimate the medical costs for individuals based on their attributes. By analyzing the dataset and identifying patterns and relationships, the model will provide insights into the factors influencing medical expenses.
-
-## Approach
-The project will involve several steps, including data preprocessing, exploratory data analysis, feature engineering, model selection, and evaluation. The dataset will be prepared by handling missing values, encoding categorical variables, and scaling numerical features. Various regression algorithms, such as linear regression, decision trees, random forests, or gradient boosting, will be explored and evaluated to determine the most effective model for cost prediction.
+The objective of this project is to classify EEG spectrogram images using CNN-based models to detect seizures and other abnormal brain activities. It aims to provide a probabilistic diagnosis that reflects medical uncertainty by comparing basic CNNs and advanced models like EfficientNetB0 using KL divergence. The project also seeks to improve diagnostic speed and accuracy through automated analysis compared to traditional methods.
 
 ## Impact
-Accurate medical cost prediction has significant implications for various stakeholders, including insurance companies, healthcare providers, and individuals. A reliable predictive model can assist insurance companies in assessing risks, determining appropriate premium rates, and managing resources efficiently. Healthcare providers can benefit from cost estimation to optimize resource allocation and budget planning. Additionally, individuals can gain insights into their potential medical expenses and make informed decisions regarding health insurance coverage.
-
-By leveraging machine learning techniques, this project aims to provide valuable insights into medical cost prediction and contribute to more accurate financial planning in the healthcare industry.
+This project helps reduce misdiagnosis by improving the accuracy of early neurological detection, leading to faster and more appropriate treatment for patients. It also supports neuro-specialists by streamlining the diagnostic process, enabling them to handle more cases efficiently, especially in rural and underserved areas with limited access to expert care.
