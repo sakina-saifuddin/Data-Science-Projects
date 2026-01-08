@@ -1,4 +1,4 @@
-# Titanic Survival Prediction Using Naïve Bayes
+# Analysis of High Grossing Movies
 This project uses the Titanic dataset to predict whether a passenger survived or not based on personal and travel-related features such as class, age, sex, fare, and embarkation point. A Naïve Bayes classification model is applied to analyze these factors and estimate survival probabilities.
 ## Dataset Information
 The dataset used in this project provides information about the passengers in the titanic It includes the following columns:
